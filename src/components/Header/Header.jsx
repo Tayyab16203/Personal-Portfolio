@@ -94,6 +94,9 @@ const Header = () => {
               <a href="#skills" className="navbar-link" onClick={handleNavClick}>Skills.</a>
             </li>
             <li>
+              <a href="#experience" className="navbar-link" onClick={handleNavClick}>Experience.</a>
+            </li>
+            <li>
               <a href="#portfolio" className="navbar-link" onClick={handleNavClick}>Portfolio.</a>
             </li>
             <li>
