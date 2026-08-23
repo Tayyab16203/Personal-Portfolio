@@ -80,7 +80,7 @@ const Contact = () => {
             <div className="wrapper">
               <h3 className="h4 contact-item-title">Address:</h3>
               <address className="contact-info">
-                Karachi, Pakistan
+                Islamabad, Pakistan
               </address>
             </div>
           </li>
