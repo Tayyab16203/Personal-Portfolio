@@ -4,7 +4,6 @@ A clean, fast, and fully responsive developer portfolio built with **React 18** 
 
 ### [🔗 Live Demo](https://tayyab-portfolio-5.vercel.app/)
 
-![Portfolio Preview](./preview.png)
 
 ## ✨ Features
 
