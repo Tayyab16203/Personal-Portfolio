@@ -12,6 +12,7 @@ A clean, fast, and fully responsive developer portfolio built with **React 18** 
 - 🚀 Lightning-fast builds with Vite
 - 🎨 Clean UI with smooth scroll and animations
 - 💼 Project showcase section with 7+ production works
+- 🗓️ Experience timeline highlighting career milestones
 - 🛠️ Interactive skills & tools toggle
 - 📬 Contact section with social links
 - ⬆️ Scroll-to-top button
