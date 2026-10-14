@@ -9,7 +9,7 @@ const Footer = () => {
         </p>
 
         <p className="copyright">
-          &copy; 2024 <a href="#">Tayyab Ur Rehman</a>. All rights reserved
+          &copy; 2026 <a href="#">Tayyab Ur Rehman</a>. All rights reserved
         </p>
       </div>
     </footer>

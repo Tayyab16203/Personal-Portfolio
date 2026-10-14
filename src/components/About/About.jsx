@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import aboutLight from '../../assets/my-images/about-2.jfif';
 import aboutDark from '../../assets/my-images/about-2-dark.jfif';
-import resumePdf from '../../assets/Tayyab-resume.pdf';
+import resumePdf from '../../assets/Tayyab-Ur-Rehman-CV.pdf';
 
 const About = () => {
   const [isDark, setIsDark] = useState(() => {
@@ -19,11 +19,17 @@ const About = () => {
 
   return (
     <section className="about" id="about">
-      <figure className="about-banner">
+      <figure className="about-banner theme-img-stack">
         <img
-          src={isDark ? aboutDark : aboutLight}
-          alt="Tayyab Ur Rehman - Frontend & Full Stack Developer"
-          className="w-100"
+          src={aboutDark}
+          alt="Tayyab Ur Rehman - Full Stack Developer"
+          className={`w-100 theme-img${isDark ? ' is-visible' : ''}`}
+        />
+        <img
+          src={aboutLight}
+          alt=""
+          aria-hidden="true"
+          className={`w-100 theme-img${!isDark ? ' is-visible' : ''}`}
         />
       </figure>
 
@@ -33,17 +39,23 @@ const About = () => {
         <h2 className="h3 section-title">Need a Creative Product? I can Help You!</h2>
 
         <p className="section-text">
-          Hi! I'm Tayyab Ur Rehman, a Frontend Developer with 2+ years of experience building
-          production web applications using React.js, Next.js, Remix, and TypeScript. Currently
-          working as a Full Stack Developer building AI-powered platforms, deploying on AWS, and
-          integrating real-time services with WebSockets and MCP servers. I'm focused on building
-          reliable software through clean architecture, automation, and collaborative engineering
-          practices.
+          Hi! I'm Tayyab Ur Rehman, a Full Stack Developer who takes AI-powered web platforms
+          from raw idea to high-scale production: framing the problem, designing the system,
+          owning the architecture, and shipping to real users. I build end to end with React,
+          Next.js, Remix and TypeScript on the frontend; FastAPI and PostgreSQL on the backend;
+          deployed on AWS with Docker and CI/CD.
+        </p>
+
+        <p className="section-text">
+          I'm lead engineer on Mishkat VLE, a multi-branch school LMS, and a core builder on
+          Xyova, an AI evaluation platform. My workflow is fully agentic and automated:
+          spec-first design, AI coding agents orchestrated over the Model Context Protocol, and
+          automated tests and CI/CD, so I stay focused on architecture, review, and delivery.
         </p>
 
         <div className="btn-group">
           <a href="#contact" className="btn btn-secondary">Hire me</a>
-          <a href={resumePdf} download="Tayyab-resume.pdf" className="btn btn-primary">Download CV</a>
+          <a href={resumePdf} download="Tayyab-Ur-Rehman-CV.pdf" className="btn btn-primary">Download CV</a>
         </div>
       </div>
     </section>

@@ -462,7 +462,38 @@ main { overflow-x: hidden; }
 
 .hero-title {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  color: var(--color-primary);
+  text-align: center;
+  font-size: var(--fs-5);
+  line-height: 1.6;
   margin-bottom: 30px;
+}
+
+/**
+ * Theme image crossfade: both light/dark images are stacked and preloaded,
+ * so toggling the theme switches instantly with no flicker or load delay.
+ */
+.theme-img-stack {
+  position: relative;
+  display: grid;
+  place-items: center;
+}
+
+.theme-img-stack .theme-img {
+  grid-area: 1 / 1;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.theme-img-stack .theme-img.is-visible {
+  opacity: 1;
 }
 
 .hero .btn-primary { margin-inline: auto; }
@@ -618,6 +649,25 @@ main { overflow-x: hidden; }
   border-radius: var(--radius-12);
   box-shadow: var(--shadow-1);
   cursor: help;
+}
+
+.skill-card .card-icon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  padding: 9px;
+  border-radius: var(--radius-12);
+  background: hsl(0, 0%, 97%);
+  box-shadow: inset 0 0 0 1px hsla(0, 0%, 0%, 0.06);
+}
+
+.skill-card .card-icon img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
 }
 
 .skill-card:hover .tooltip {
@@ -1430,7 +1480,23 @@ textarea.input-field {
   .hero img {
     height: 100%;
     width: auto;
+    max-width: 100%;
+    object-fit: contain;
     margin-inline: auto;
+  }
+
+  /* On desktop the banner is viewport-tall; size the stack by the image's
+     aspect ratio so both stacked images keep proportions (no stretching). */
+  .hero .theme-img-stack {
+    height: 100%;
+    aspect-ratio: 1063 / 900;
+    margin-inline: auto;
+  }
+
+  .hero .theme-img-stack .theme-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .hero-content {

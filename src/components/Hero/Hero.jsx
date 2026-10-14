@@ -18,16 +18,25 @@ const Hero = () => {
 
   return (
     <section className="hero" id="home">
-      <figure className="hero-banner">
+      <figure className="hero-banner theme-img-stack">
         <img
-          src={isDark ? heroDark : heroLight}
-          alt="Tayyab Ur Rehman - Frontend & Full Stack Developer"
-          className="w-100"
+          src={heroDark}
+          alt="Tayyab Ur Rehman - Full Stack Developer"
+          className={`w-100 theme-img${isDark ? ' is-visible' : ''}`}
+        />
+        <img
+          src={heroLight}
+          alt=""
+          aria-hidden="true"
+          className={`w-100 theme-img${!isDark ? ' is-visible' : ''}`}
         />
       </figure>
 
       <div className="hero-content">
-        <h2 className="h2 hero-title">I Design &amp; Build Modern Web Products</h2>
+        <h2 className="h2 hero-title">Full Stack Developer Building AI-Powered Web Platforms</h2>
+        <p className="hero-text">
+          I ship AI platforms from idea to production with Next.js, FastAPI &amp; AWS.
+        </p>
         <a href="#contact" className="btn btn-primary">Get in touch</a>
       </div>
 
